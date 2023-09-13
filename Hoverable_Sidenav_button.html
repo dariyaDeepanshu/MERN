@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sidebar with Hoverable Buttons</title>
+    <link rel="stylesheet" type="text/css" href="CSS-4.css">
+    <style>
+        /* Center content in the middle of the page */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 100% of viewport height */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="closeSidebar()">&#8592;</div>
+        <a href="#">Button 1</a>
+        <a href="#">Button 2</a>
+        <a href="#">Button 3</a>
+        <!-- Add more buttons as needed -->
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <h1>Your Content Goes Here</h1>
+        <p>Hover over the buttons in the left side navigation to open them</p>
+        <!-- Add your main content here -->
+    </div>
+</div>
+
+<script>
+// JavaScript function to open the sidebar
+function openSidebar() {
+    document.getElementById("sidebar").style.left = "0";
+    document.getElementById("mainContent").classList.add("sidebar-open");
+}
+
+// JavaScript function to close the sidebar
+function closeSidebar() {
+    document.getElementById("sidebar").style.left = "-250px";
+    document.getElementById("mainContent").classList.remove("sidebar-open");
+}
+</script>
+
+</body>
+</html>
